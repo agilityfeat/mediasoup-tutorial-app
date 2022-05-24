@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediasoup Demo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <noscript>Please enable JavaScript to access this website.</noscript>
+    <div class="rootDiv">
+        <div class="side-bar">
+            <div class="nav">
+                <div class="guildSettings">
+                    <div class="navguild">
+                        <div class="guild-opener">
+                            <div class="navGuildItems">
+                                <h4 class="guildSelectorName">Server Name</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="channels">
+                        <button class="channelName" id="server1"><i class="fa fa-hashtag"></i> Text channel</button>
+                        <button class="channelName" id="voice1"><i class="fa fa-volume-up"></i> Voice channel</button>
+                        <div class="participants" id="participantContainer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="userBox">
+                <img src="logo.webp" alt="avatar" class="userAvatar">
+                <div class="userinfo">
+                    <h4 class="username">Username</h4>
+                    <h6 class="discriminator">#1234</h6>
+                </div>
+                <div class="usermenuicons">
+                    <div class="mic" id="micToggle"></div>
+                    <div class="headphone" id="headphoneToggle"></div>
+                    <div class="settings" id="closeToggle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="servers">
+            <div class="server">
+                <img class="servericon" src="logo2.webp">
+            </div>
+            <hr class="server-divider" />
+            <div class="server">
+                <img class="servericon" src="logo.webp">
+            </div>
+            <div class="server invite">
+                <p class="inviteButton">+</p>
+            </div>
+        </div>
+        <div class="members"></div>
+        <div class="chatArea">
+            <div id="videoContainer"></div>
+
+            <section class="chatbox">
+                <section class="chat-window" id="chatWindow">
+                </section>
+                <form class="chat-input" onsubmit="return false;">
+                    <input id="chatInput" type="text" autocomplete="on" placeholder="Type a message" />
+                    <button id="sendText">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,.38)" d="M17,12L12,17V14H8V10H12V7L17,12M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z" /></svg>
+                        </button>
+                </form>
+            </section>
+        </div>
+    </div>
+    
+</body>
+<script src="app-bundle.js"></script>
+
+</html>

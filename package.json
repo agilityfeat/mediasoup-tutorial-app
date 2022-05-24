@@ -1,0 +1,21 @@
+{
+  "name": "mediasoup-tutorial-app",
+  "version": "1.0.0",
+  "description": "A sample app can be developed further with mediasoup",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browserify client.js -o public/app-bundle.js; node server.js"
+  },
+  "author": "golgetahir",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "mediasoup": "^3.9.12",
+    "mediasoup-client": "^3.6.51",
+    "socket.io": "^4.5.0",
+    "socket.io-client": "^4.5.0"
+  }
+}
